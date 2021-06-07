@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8"/>
+    <title>Add Company</title>
+</head>
+<body>
+<div align="center">
+    <h2>Adding a new Company</h2><br/>
+    <form th:object="${companyForm}" th:action="@{/consultant}" method="post">
+        Name: <input type="text" th:field="*{name}"/> <br/><br/>
+        SteuerNummer: <input type="text" th:field="*{steuerNummer}"/> <br/><br/>
+        <button type="submit">ADD</button>
+    </form>
+</div>
+</body>
+</html>

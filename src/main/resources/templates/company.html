@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8"/>
+    <title>Consultant Portal</title>
+    <style>
+        div {
+            margin: 30px 50px 15px 25px;
+        }
+
+        table {
+
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <h3>Company</h3>
+</div>
+<div style="font-size: 18px; color: blue">
+    Name: <label th:text="${company.name}"/><br/>
+    SteuerNummer: <label th:text="${company.steuerNummer}"/><br/>
+    Status: <label th:text="${company.status}"/><br/>
+</div>
+<div th:if="${not  #lists.isEmpty(employees)}">
+    <h3>Employees</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+        </tr>
+        <tr th:each="e : ${employees}">
+            <td th:text="${e.id}"></td>
+            <td><a th:href="@{'/employee/'+${e.id}}" th:text="${e.firstName +' '+ e.lastName}"/></td>
+        </tr>
+    </table>
+</div>
+</div>
+<a href="/consultant">Back</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8"/>
+    <title>LogIn</title>
+</head>
+<body>
+<div align="center">
+    <h2>Please, Log in ... </h2><br/>
+    <form th:object="${loginConsultantForm}" th:action="@{/consultantPortal}" method="post">
+        E-Mail: <input type="email" th:field="*{email}"/> <br/><br/>
+        Password: <input type="password" th:field="*{password}"/> <br/><br/>
+        <button type="submit">LOGIN</button>
+    </form>
+</div>
+</body>
+</html>

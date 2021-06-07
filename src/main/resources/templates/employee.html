@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8"/>
+    <title>Consultant Portal</title>
+    <style>
+        div{
+            margin: 30px 50px 15px 25px;
+        }
+        table{
+
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <h5>Consultant</h5>
+</div>
+<div>
+    First Name: <label th:text="${employee.firstName}"/><br/>
+    Second Name: <label th:text="${employee.lastName}"/><br/>
+    Role: <label th:text="${employee.getRole()}"/><br/>
+</div>
+<a href="#" onclick="history.back();">Back</a>
+</body>
+</html>
